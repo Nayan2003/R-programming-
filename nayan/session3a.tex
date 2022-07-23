@@ -1,0 +1,527 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={session 3 a},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{session 3 a}
+\author{}
+\date{\vspace{-2.5em}2022-07-20}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{))}
+\FunctionTok{curve}\NormalTok{(}\FunctionTok{dnorm}\NormalTok{(x, }\AttributeTok{mean =} \DecValTok{2}\NormalTok{, }\AttributeTok{sd =} \DecValTok{1}\NormalTok{), }\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{, }\DecValTok{6}\NormalTok{, }
+      \AttributeTok{col =}\StringTok{"red"}\NormalTok{, }\AttributeTok{lwd=}\StringTok{"2"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{session3a_files/figure-latex/unnamed-chunk-1-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{curve}\NormalTok{(}\FunctionTok{dnorm}\NormalTok{(x), }\SpecialCharTok{{-}}\DecValTok{3}\NormalTok{, }\DecValTok{3}\NormalTok{, }\AttributeTok{col =} \StringTok{"red"}\NormalTok{, }\AttributeTok{lwd =}\DecValTok{2}\NormalTok{,}
+      \AttributeTok{main =} \StringTok{"N(0,1)"}\NormalTok{)}
+
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{v=}\DecValTok{0}\NormalTok{ , }\AttributeTok{col =} \StringTok{"blue"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{3}\NormalTok{, }\AttributeTok{lty =}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{session3a_files/figure-latex/unnamed-chunk-1-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{pnorm}\NormalTok{(}\DecValTok{0}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{qnorm}\NormalTok{(}\FloatTok{0.5}\NormalTok{)}\DocumentationTok{\#\# quantile function}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+ \FunctionTok{curve}\NormalTok{(}\FunctionTok{dunif}\NormalTok{(x), }\AttributeTok{col =} \StringTok{"red"}\NormalTok{, }\AttributeTok{lwd =}\DecValTok{2}\NormalTok{, }\SpecialCharTok{{-}}\FloatTok{0.5}\NormalTok{, }\FloatTok{1.5}\NormalTok{) }
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{v=}\FloatTok{0.5}\NormalTok{, }\AttributeTok{col =}\StringTok{"blue"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{3}\NormalTok{, }\AttributeTok{lty =} \DecValTok{2}\NormalTok{) }
+\FunctionTok{punif}\NormalTok{(}\FloatTok{0.5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{v=}\FloatTok{0.8}\NormalTok{, }\AttributeTok{col =} \StringTok{"green"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{3}\NormalTok{ , }\AttributeTok{lty =} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{session3a_files/figure-latex/unnamed-chunk-1-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{punif}\NormalTok{(}\FloatTok{0.8}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.8
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OtherTok{=} \FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{4}\NormalTok{,}\DecValTok{4}\NormalTok{, }\AttributeTok{by =} \FloatTok{0.01}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(x, }\FunctionTok{dnorm}\NormalTok{(x), }\AttributeTok{col =} \StringTok{"red"}\NormalTok{, }\AttributeTok{lwd =}\DecValTok{2}\NormalTok{,}
+     \AttributeTok{type =} \StringTok{"l"}\NormalTok{, }\AttributeTok{ylim =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{))}
+\FunctionTok{pnorm}\NormalTok{(x)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   [1] 3.167124e-05 3.303665e-05 3.445763e-05 3.593632e-05 3.747488e-05
+##   [6] 3.907560e-05 4.074080e-05 4.247293e-05 4.427448e-05 4.614806e-05
+##  [11] 4.809634e-05 5.012211e-05 5.222823e-05 5.441768e-05 5.669351e-05
+##  [16] 5.905891e-05 6.151716e-05 6.407163e-05 6.672584e-05 6.948340e-05
+##  [21] 7.234804e-05 7.532364e-05 7.841418e-05 8.162377e-05 8.495668e-05
+##  [26] 8.841729e-05 9.201013e-05 9.573989e-05 9.961139e-05 1.036296e-04
+##  [31] 1.077997e-04 1.121270e-04 1.166170e-04 1.212752e-04 1.261076e-04
+##  [36] 1.311202e-04 1.363190e-04 1.417106e-04 1.473015e-04 1.530985e-04
+##  [41] 1.591086e-04 1.653390e-04 1.717971e-04 1.784906e-04 1.854274e-04
+##  [46] 1.926156e-04 2.000635e-04 2.077798e-04 2.157734e-04 2.240533e-04
+##  [51] 2.326291e-04 2.415103e-04 2.507069e-04 2.602292e-04 2.700877e-04
+##  [56] 2.802933e-04 2.908571e-04 3.017906e-04 3.131057e-04 3.248144e-04
+##  [61] 3.369293e-04 3.494631e-04 3.624291e-04 3.758409e-04 3.897124e-04
+##  [66] 4.040578e-04 4.188919e-04 4.342299e-04 4.500872e-04 4.664799e-04
+##  [71] 4.834241e-04 5.009369e-04 5.190354e-04 5.377374e-04 5.570611e-04
+##  [76] 5.770250e-04 5.976485e-04 6.189511e-04 6.409530e-04 6.636749e-04
+##  [81] 6.871379e-04 7.113640e-04 7.363753e-04 7.621947e-04 7.888457e-04
+##  [86] 8.163523e-04 8.447392e-04 8.740315e-04 9.042552e-04 9.354367e-04
+##  [91] 9.676032e-04 1.000782e-03 1.035003e-03 1.070294e-03 1.106685e-03
+##  [96] 1.144207e-03 1.182891e-03 1.222769e-03 1.263873e-03 1.306238e-03
+## [101] 1.349898e-03 1.394887e-03 1.441242e-03 1.488999e-03 1.538195e-03
+## [106] 1.588870e-03 1.641061e-03 1.694810e-03 1.750157e-03 1.807144e-03
+## [111] 1.865813e-03 1.926209e-03 1.988376e-03 2.052359e-03 2.118205e-03
+## [116] 2.185961e-03 2.255677e-03 2.327400e-03 2.401182e-03 2.477075e-03
+## [121] 2.555130e-03 2.635402e-03 2.717945e-03 2.802815e-03 2.890068e-03
+## [126] 2.979763e-03 3.071959e-03 3.166716e-03 3.264096e-03 3.364160e-03
+## [131] 3.466974e-03 3.572601e-03 3.681108e-03 3.792562e-03 3.907033e-03
+## [136] 4.024589e-03 4.145301e-03 4.269243e-03 4.396488e-03 4.527111e-03
+## [141] 4.661188e-03 4.798797e-03 4.940016e-03 5.084926e-03 5.233608e-03
+## [146] 5.386146e-03 5.542623e-03 5.703126e-03 5.867742e-03 6.036558e-03
+## [151] 6.209665e-03 6.387155e-03 6.569119e-03 6.755653e-03 6.946851e-03
+## [156] 7.142811e-03 7.343631e-03 7.549411e-03 7.760254e-03 7.976260e-03
+## [161] 8.197536e-03 8.424186e-03 8.656319e-03 8.894043e-03 9.137468e-03
+## [166] 9.386706e-03 9.641870e-03 9.903076e-03 1.017044e-02 1.044408e-02
+## [171] 1.072411e-02 1.101066e-02 1.130384e-02 1.160379e-02 1.191063e-02
+## [176] 1.222447e-02 1.254546e-02 1.287372e-02 1.320938e-02 1.355258e-02
+## [181] 1.390345e-02 1.426212e-02 1.462873e-02 1.500342e-02 1.538633e-02
+## [186] 1.577761e-02 1.617738e-02 1.658581e-02 1.700302e-02 1.742918e-02
+## [191] 1.786442e-02 1.830890e-02 1.876277e-02 1.922617e-02 1.969927e-02
+## [196] 2.018222e-02 2.067516e-02 2.117827e-02 2.169169e-02 2.221559e-02
+## [201] 2.275013e-02 2.329547e-02 2.385176e-02 2.441919e-02 2.499790e-02
+## [206] 2.558806e-02 2.618984e-02 2.680342e-02 2.742895e-02 2.806661e-02
+## [211] 2.871656e-02 2.937898e-02 3.005404e-02 3.074191e-02 3.144276e-02
+## [216] 3.215677e-02 3.288412e-02 3.362497e-02 3.437950e-02 3.514789e-02
+## [221] 3.593032e-02 3.672696e-02 3.753798e-02 3.836357e-02 3.920390e-02
+## [226] 4.005916e-02 4.092951e-02 4.181514e-02 4.271622e-02 4.363294e-02
+## [231] 4.456546e-02 4.551398e-02 4.647866e-02 4.745968e-02 4.845723e-02
+## [236] 4.947147e-02 5.050258e-02 5.155075e-02 5.261614e-02 5.369893e-02
+## [241] 5.479929e-02 5.591740e-02 5.705343e-02 5.820756e-02 5.937994e-02
+## [246] 6.057076e-02 6.178018e-02 6.300836e-02 6.425549e-02 6.552171e-02
+## [251] 6.680720e-02 6.811212e-02 6.943662e-02 7.078088e-02 7.214504e-02
+## [256] 7.352926e-02 7.493370e-02 7.635851e-02 7.780384e-02 7.926984e-02
+## [261] 8.075666e-02 8.226444e-02 8.379332e-02 8.534345e-02 8.691496e-02
+## [266] 8.850799e-02 9.012267e-02 9.175914e-02 9.341751e-02 9.509792e-02
+## [271] 9.680048e-02 9.852533e-02 1.002726e-01 1.020423e-01 1.038347e-01
+## [276] 1.056498e-01 1.074877e-01 1.093486e-01 1.112324e-01 1.131394e-01
+## [281] 1.150697e-01 1.170232e-01 1.190001e-01 1.210005e-01 1.230244e-01
+## [286] 1.250719e-01 1.271432e-01 1.292381e-01 1.313569e-01 1.334995e-01
+## [291] 1.356661e-01 1.378566e-01 1.400711e-01 1.423097e-01 1.445723e-01
+## [296] 1.468591e-01 1.491700e-01 1.515050e-01 1.538642e-01 1.562476e-01
+## [301] 1.586553e-01 1.610871e-01 1.635431e-01 1.660232e-01 1.685276e-01
+## [306] 1.710561e-01 1.736088e-01 1.761855e-01 1.787864e-01 1.814113e-01
+## [311] 1.840601e-01 1.867329e-01 1.894297e-01 1.921502e-01 1.948945e-01
+## [316] 1.976625e-01 2.004542e-01 2.032694e-01 2.061081e-01 2.089701e-01
+## [321] 2.118554e-01 2.147639e-01 2.176954e-01 2.206499e-01 2.236273e-01
+## [326] 2.266274e-01 2.296500e-01 2.326951e-01 2.357625e-01 2.388521e-01
+## [331] 2.419637e-01 2.450971e-01 2.482522e-01 2.514289e-01 2.546269e-01
+## [336] 2.578461e-01 2.610863e-01 2.643473e-01 2.676289e-01 2.709309e-01
+## [341] 2.742531e-01 2.775953e-01 2.809573e-01 2.843388e-01 2.877397e-01
+## [346] 2.911597e-01 2.945985e-01 2.980560e-01 3.015318e-01 3.050257e-01
+## [351] 3.085375e-01 3.120669e-01 3.156137e-01 3.191775e-01 3.227581e-01
+## [356] 3.263552e-01 3.299686e-01 3.335978e-01 3.372427e-01 3.409030e-01
+## [361] 3.445783e-01 3.482683e-01 3.519727e-01 3.556912e-01 3.594236e-01
+## [366] 3.631693e-01 3.669283e-01 3.707000e-01 3.744842e-01 3.782805e-01
+## [371] 3.820886e-01 3.859081e-01 3.897388e-01 3.935801e-01 3.974319e-01
+## [376] 4.012937e-01 4.051651e-01 4.090459e-01 4.129356e-01 4.168338e-01
+## [381] 4.207403e-01 4.246546e-01 4.285763e-01 4.325051e-01 4.364405e-01
+## [386] 4.403823e-01 4.443300e-01 4.482832e-01 4.522416e-01 4.562047e-01
+## [391] 4.601722e-01 4.641436e-01 4.681186e-01 4.720968e-01 4.760778e-01
+## [396] 4.800612e-01 4.840466e-01 4.880335e-01 4.920217e-01 4.960106e-01
+## [401] 5.000000e-01 5.039894e-01 5.079783e-01 5.119665e-01 5.159534e-01
+## [406] 5.199388e-01 5.239222e-01 5.279032e-01 5.318814e-01 5.358564e-01
+## [411] 5.398278e-01 5.437953e-01 5.477584e-01 5.517168e-01 5.556700e-01
+## [416] 5.596177e-01 5.635595e-01 5.674949e-01 5.714237e-01 5.753454e-01
+## [421] 5.792597e-01 5.831662e-01 5.870644e-01 5.909541e-01 5.948349e-01
+## [426] 5.987063e-01 6.025681e-01 6.064199e-01 6.102612e-01 6.140919e-01
+## [431] 6.179114e-01 6.217195e-01 6.255158e-01 6.293000e-01 6.330717e-01
+## [436] 6.368307e-01 6.405764e-01 6.443088e-01 6.480273e-01 6.517317e-01
+## [441] 6.554217e-01 6.590970e-01 6.627573e-01 6.664022e-01 6.700314e-01
+## [446] 6.736448e-01 6.772419e-01 6.808225e-01 6.843863e-01 6.879331e-01
+## [451] 6.914625e-01 6.949743e-01 6.984682e-01 7.019440e-01 7.054015e-01
+## [456] 7.088403e-01 7.122603e-01 7.156612e-01 7.190427e-01 7.224047e-01
+## [461] 7.257469e-01 7.290691e-01 7.323711e-01 7.356527e-01 7.389137e-01
+## [466] 7.421539e-01 7.453731e-01 7.485711e-01 7.517478e-01 7.549029e-01
+## [471] 7.580363e-01 7.611479e-01 7.642375e-01 7.673049e-01 7.703500e-01
+## [476] 7.733726e-01 7.763727e-01 7.793501e-01 7.823046e-01 7.852361e-01
+## [481] 7.881446e-01 7.910299e-01 7.938919e-01 7.967306e-01 7.995458e-01
+## [486] 8.023375e-01 8.051055e-01 8.078498e-01 8.105703e-01 8.132671e-01
+## [491] 8.159399e-01 8.185887e-01 8.212136e-01 8.238145e-01 8.263912e-01
+## [496] 8.289439e-01 8.314724e-01 8.339768e-01 8.364569e-01 8.389129e-01
+## [501] 8.413447e-01 8.437524e-01 8.461358e-01 8.484950e-01 8.508300e-01
+## [506] 8.531409e-01 8.554277e-01 8.576903e-01 8.599289e-01 8.621434e-01
+## [511] 8.643339e-01 8.665005e-01 8.686431e-01 8.707619e-01 8.728568e-01
+## [516] 8.749281e-01 8.769756e-01 8.789995e-01 8.809999e-01 8.829768e-01
+## [521] 8.849303e-01 8.868606e-01 8.887676e-01 8.906514e-01 8.925123e-01
+## [526] 8.943502e-01 8.961653e-01 8.979577e-01 8.997274e-01 9.014747e-01
+## [531] 9.031995e-01 9.049021e-01 9.065825e-01 9.082409e-01 9.098773e-01
+## [536] 9.114920e-01 9.130850e-01 9.146565e-01 9.162067e-01 9.177356e-01
+## [541] 9.192433e-01 9.207302e-01 9.221962e-01 9.236415e-01 9.250663e-01
+## [546] 9.264707e-01 9.278550e-01 9.292191e-01 9.305634e-01 9.318879e-01
+## [551] 9.331928e-01 9.344783e-01 9.357445e-01 9.369916e-01 9.382198e-01
+## [556] 9.394292e-01 9.406201e-01 9.417924e-01 9.429466e-01 9.440826e-01
+## [561] 9.452007e-01 9.463011e-01 9.473839e-01 9.484493e-01 9.494974e-01
+## [566] 9.505285e-01 9.515428e-01 9.525403e-01 9.535213e-01 9.544860e-01
+## [571] 9.554345e-01 9.563671e-01 9.572838e-01 9.581849e-01 9.590705e-01
+## [576] 9.599408e-01 9.607961e-01 9.616364e-01 9.624620e-01 9.632730e-01
+## [581] 9.640697e-01 9.648521e-01 9.656205e-01 9.663750e-01 9.671159e-01
+## [586] 9.678432e-01 9.685572e-01 9.692581e-01 9.699460e-01 9.706210e-01
+## [591] 9.712834e-01 9.719334e-01 9.725711e-01 9.731966e-01 9.738102e-01
+## [596] 9.744119e-01 9.750021e-01 9.755808e-01 9.761482e-01 9.767045e-01
+## [601] 9.772499e-01 9.777844e-01 9.783083e-01 9.788217e-01 9.793248e-01
+## [606] 9.798178e-01 9.803007e-01 9.807738e-01 9.812372e-01 9.816911e-01
+## [611] 9.821356e-01 9.825708e-01 9.829970e-01 9.834142e-01 9.838226e-01
+## [616] 9.842224e-01 9.846137e-01 9.849966e-01 9.853713e-01 9.857379e-01
+## [621] 9.860966e-01 9.864474e-01 9.867906e-01 9.871263e-01 9.874545e-01
+## [626] 9.877755e-01 9.880894e-01 9.883962e-01 9.886962e-01 9.889893e-01
+## [631] 9.892759e-01 9.895559e-01 9.898296e-01 9.900969e-01 9.903581e-01
+## [636] 9.906133e-01 9.908625e-01 9.911060e-01 9.913437e-01 9.915758e-01
+## [641] 9.918025e-01 9.920237e-01 9.922397e-01 9.924506e-01 9.926564e-01
+## [646] 9.928572e-01 9.930531e-01 9.932443e-01 9.934309e-01 9.936128e-01
+## [651] 9.937903e-01 9.939634e-01 9.941323e-01 9.942969e-01 9.944574e-01
+## [656] 9.946139e-01 9.947664e-01 9.949151e-01 9.950600e-01 9.952012e-01
+## [661] 9.953388e-01 9.954729e-01 9.956035e-01 9.957308e-01 9.958547e-01
+## [666] 9.959754e-01 9.960930e-01 9.962074e-01 9.963189e-01 9.964274e-01
+## [671] 9.965330e-01 9.966358e-01 9.967359e-01 9.968333e-01 9.969280e-01
+## [676] 9.970202e-01 9.971099e-01 9.971972e-01 9.972821e-01 9.973646e-01
+## [681] 9.974449e-01 9.975229e-01 9.975988e-01 9.976726e-01 9.977443e-01
+## [686] 9.978140e-01 9.978818e-01 9.979476e-01 9.980116e-01 9.980738e-01
+## [691] 9.981342e-01 9.981929e-01 9.982498e-01 9.983052e-01 9.983589e-01
+## [696] 9.984111e-01 9.984618e-01 9.985110e-01 9.985588e-01 9.986051e-01
+## [701] 9.986501e-01 9.986938e-01 9.987361e-01 9.987772e-01 9.988171e-01
+## [706] 9.988558e-01 9.988933e-01 9.989297e-01 9.989650e-01 9.989992e-01
+## [711] 9.990324e-01 9.990646e-01 9.990957e-01 9.991260e-01 9.991553e-01
+## [716] 9.991836e-01 9.992112e-01 9.992378e-01 9.992636e-01 9.992886e-01
+## [721] 9.993129e-01 9.993363e-01 9.993590e-01 9.993810e-01 9.994024e-01
+## [726] 9.994230e-01 9.994429e-01 9.994623e-01 9.994810e-01 9.994991e-01
+## [731] 9.995166e-01 9.995335e-01 9.995499e-01 9.995658e-01 9.995811e-01
+## [736] 9.995959e-01 9.996103e-01 9.996242e-01 9.996376e-01 9.996505e-01
+## [741] 9.996631e-01 9.996752e-01 9.996869e-01 9.996982e-01 9.997091e-01
+## [746] 9.997197e-01 9.997299e-01 9.997398e-01 9.997493e-01 9.997585e-01
+## [751] 9.997674e-01 9.997759e-01 9.997842e-01 9.997922e-01 9.997999e-01
+## [756] 9.998074e-01 9.998146e-01 9.998215e-01 9.998282e-01 9.998347e-01
+## [761] 9.998409e-01 9.998469e-01 9.998527e-01 9.998583e-01 9.998637e-01
+## [766] 9.998689e-01 9.998739e-01 9.998787e-01 9.998834e-01 9.998879e-01
+## [771] 9.998922e-01 9.998964e-01 9.999004e-01 9.999043e-01 9.999080e-01
+## [776] 9.999116e-01 9.999150e-01 9.999184e-01 9.999216e-01 9.999247e-01
+## [781] 9.999277e-01 9.999305e-01 9.999333e-01 9.999359e-01 9.999385e-01
+## [786] 9.999409e-01 9.999433e-01 9.999456e-01 9.999478e-01 9.999499e-01
+## [791] 9.999519e-01 9.999539e-01 9.999557e-01 9.999575e-01 9.999593e-01
+## [796] 9.999609e-01 9.999625e-01 9.999641e-01 9.999655e-01 9.999670e-01
+## [801] 9.999683e-01
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{lines}\NormalTok{(x, }\FunctionTok{pnorm}\NormalTok{(x), }\AttributeTok{col =} \StringTok{"blue"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{3}\NormalTok{, }\AttributeTok{lty =} \DecValTok{2}\NormalTok{)}
+\FunctionTok{legend}\NormalTok{(}\StringTok{"topleft"}\NormalTok{, }\AttributeTok{legend =} \FunctionTok{c}\NormalTok{(}\FunctionTok{expression}\NormalTok{(F[x](x)),}
+                             \FunctionTok{expression}\NormalTok{(f[x](x))),}
+       
+        \AttributeTok{col =} \FunctionTok{c}\NormalTok{(}\StringTok{"blue"}\NormalTok{, }\StringTok{"red"}\NormalTok{), }\AttributeTok{lwd =}\FunctionTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{2}\NormalTok{)}
+\NormalTok{       ,}\AttributeTok{lty =} \FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{1}\NormalTok{), }\AttributeTok{bty =} \StringTok{"n"}\NormalTok{, }\AttributeTok{cex =} \FloatTok{1.5}\NormalTok{)}
+\FunctionTok{title}\NormalTok{(}\StringTok{"standard Gaussian Distribution"}\NormalTok{)}
+
+\FunctionTok{points}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{4}\NormalTok{, }\FloatTok{0.8}\NormalTok{, }\AttributeTok{pch =}\DecValTok{19}\NormalTok{, }\AttributeTok{col=} \StringTok{"magenta"}\NormalTok{,}
+       \AttributeTok{cex=} \FloatTok{1.5}\NormalTok{)}
+\FunctionTok{segments}\NormalTok{(}\AttributeTok{x0 =}\SpecialCharTok{{-}}\DecValTok{4}\NormalTok{, }\AttributeTok{y0=} \FloatTok{0.8}\NormalTok{, }\AttributeTok{x1=} \FunctionTok{qnorm}\NormalTok{(}\FloatTok{0.8}\NormalTok{),}\AttributeTok{y1 =} \FloatTok{0.8}\NormalTok{,}\AttributeTok{col =} \StringTok{"green"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{3}\NormalTok{)}
+
+\FunctionTok{points}\NormalTok{(}\FunctionTok{qnorm}\NormalTok{(}\FloatTok{0.8}\NormalTok{),}\FunctionTok{pnorm}\NormalTok{(}\FloatTok{0.8}\NormalTok{), }\AttributeTok{pch =} \DecValTok{19}
+\NormalTok{      , }\AttributeTok{col =} \StringTok{"magenta"}\NormalTok{, }\AttributeTok{cex =}\FloatTok{1.5}\NormalTok{)}
+\FunctionTok{segments}\NormalTok{(}\AttributeTok{x0=} \FunctionTok{qnorm}\NormalTok{(}\FloatTok{0.8}\NormalTok{), }\AttributeTok{y0=}\FunctionTok{pnorm}\NormalTok{(}\FloatTok{0.8}\NormalTok{),}\AttributeTok{x1=}\FunctionTok{qnorm}\NormalTok{(}\FloatTok{0.8}\NormalTok{), }\AttributeTok{y1=}\DecValTok{0}\NormalTok{, }\AttributeTok{col =} \StringTok{"green"}\NormalTok{, }\AttributeTok{lwd =} \DecValTok{3}\NormalTok{)}
+\FunctionTok{points}\NormalTok{(}\FunctionTok{qnorm}\NormalTok{(}\FloatTok{0.8}\NormalTok{),}\DecValTok{0}\NormalTok{,}\AttributeTok{pch =}\DecValTok{19}\NormalTok{, }\AttributeTok{col =} \StringTok{"black"}\NormalTok{,}\AttributeTok{cex=}\FloatTok{1.5}\NormalTok{)}
+\FunctionTok{text}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{4}\NormalTok{, }\FloatTok{0.75}\NormalTok{, }\FunctionTok{expression}\NormalTok{(q), }\AttributeTok{cex =} \FloatTok{1.2}\NormalTok{)}
+\FunctionTok{text}\NormalTok{(}\SpecialCharTok{{-}}\FloatTok{0.4}\NormalTok{, }\DecValTok{0}\NormalTok{, }\FunctionTok{expression}\NormalTok{(F[x]}\SpecialCharTok{\^{}}\NormalTok{\{}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{\} }\SpecialCharTok{*}\NormalTok{(q)),}
+     \AttributeTok{cex =}\FloatTok{1.3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{session3a_files/figure-latex/unnamed-chunk-1-4.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{curve}\NormalTok{(}\FunctionTok{dnorm}\NormalTok{(x), }\AttributeTok{col =} \StringTok{"red"}\NormalTok{,}\AttributeTok{lwd =} \DecValTok{2}\NormalTok{, }\SpecialCharTok{{-}}\DecValTok{4}\NormalTok{,}\DecValTok{4}\NormalTok{)}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{v =}\FunctionTok{c}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{,}\DecValTok{1}\NormalTok{), }\AttributeTok{col =} \StringTok{"blue"}\NormalTok{, }\AttributeTok{lwd =}\DecValTok{3}\NormalTok{, }\AttributeTok{lty =}\DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{session3a_files/figure-latex/unnamed-chunk-1-5.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{integrate}\NormalTok{(dnorm, }\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 0.6826895 with absolute error < 7.6e-15
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{pnorm}\NormalTok{(}\DecValTok{1}\NormalTok{)}\SpecialCharTok{{-}} \FunctionTok{pnorm}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.6826895
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{p}\OtherTok{=}\FloatTok{0.4}
+\NormalTok{n}\OtherTok{=}\DecValTok{10}
+\NormalTok{x}\OtherTok{=} \DecValTok{0}\SpecialCharTok{:}\NormalTok{n}
+\NormalTok{p\_x }\OtherTok{=} \FunctionTok{choose}\NormalTok{(n, x)}\SpecialCharTok{*}\NormalTok{ p}\SpecialCharTok{\^{}}\NormalTok{x}\SpecialCharTok{*}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{p)}\SpecialCharTok{\^{}}\NormalTok{(n}\SpecialCharTok{{-}}\NormalTok{x)}
+\FunctionTok{plot}\NormalTok{(x, p\_x, }\AttributeTok{type =} \StringTok{"h"}\NormalTok{ , }\AttributeTok{col =} \StringTok{"red"}\NormalTok{, }\AttributeTok{lwd =}\DecValTok{2}\NormalTok{,}
+     \AttributeTok{ylab =} \StringTok{"p(X=x)"}\NormalTok{)}
+\FunctionTok{points}\NormalTok{(x,p\_x, }\AttributeTok{pch=} \DecValTok{19}\NormalTok{, }\AttributeTok{col =}\StringTok{"blue"}\NormalTok{, }\AttributeTok{cex =}\FloatTok{1.5}\NormalTok{)}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{v=} \FloatTok{3.5}\NormalTok{, }\AttributeTok{col =} \StringTok{"magenta"}\NormalTok{,}\AttributeTok{lwd =}\DecValTok{3}\NormalTok{, }\AttributeTok{lty =} \DecValTok{3}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{session3a_files/figure-latex/unnamed-chunk-1-6.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{pbinom}\NormalTok{(}\FloatTok{3.5}\NormalTok{, }\AttributeTok{size =}\NormalTok{ n, }\AttributeTok{prob =}\NormalTok{ p)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.3822806
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{p\_x[}\DecValTok{1}\NormalTok{] }\SpecialCharTok{+}\NormalTok{ p\_x[x] }\SpecialCharTok{+}\NormalTok{ p\_x[}\DecValTok{3}\NormalTok{] }\SpecialCharTok{+}\NormalTok{ p\_x[}\DecValTok{4}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1] 0.3480164 0.3822806 0.4629022 0.5569607 0.5927925 0.5426279 0.4534466
+##  [8] 0.3844371 0.3525866 0.3435427
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{p\_x[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{4}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.006046618 0.040310784 0.120932352 0.214990848
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sum}\NormalTok{(p\_x[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{4}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 0.3822806
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x}\OtherTok{=}\FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\FloatTok{0.5}\NormalTok{,}\FloatTok{11.5}\NormalTok{,}\AttributeTok{by=}\FloatTok{0.01}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(x,}\FunctionTok{pbinom}\NormalTok{(x,}\AttributeTok{size=}\NormalTok{n,}\AttributeTok{prob=}\NormalTok{p),}\AttributeTok{type =} \StringTok{"l"}\NormalTok{,}\AttributeTok{col=}\StringTok{"red"}\NormalTok{,}\AttributeTok{lwd=}\DecValTok{2}\NormalTok{)}
+\FunctionTok{points}\NormalTok{(}\DecValTok{0}\SpecialCharTok{:}\DecValTok{10}\NormalTok{,}\FunctionTok{cumsum}\NormalTok{(p\_x),}\AttributeTok{pch=}\DecValTok{19}\NormalTok{,}\AttributeTok{cex=}\FloatTok{1.5}\NormalTok{,}\AttributeTok{col=}\StringTok{"blue"}\NormalTok{)}
+\FunctionTok{sum}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\DecValTok{4}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 10
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cumsum}\NormalTok{(}\DecValTok{1}\SpecialCharTok{:}\DecValTok{4}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1]  1  3  6 10
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{points}\NormalTok{(}\DecValTok{0}\NormalTok{,}\FloatTok{0.5}\NormalTok{,}\AttributeTok{pch=}\DecValTok{19}\NormalTok{,}\AttributeTok{col=}\StringTok{"magenta"}\NormalTok{,}\AttributeTok{cex=}\FloatTok{1.5}\NormalTok{)}
+\FunctionTok{segments}\NormalTok{(}\DecValTok{0}\NormalTok{,}\FloatTok{0.5}\NormalTok{,}\FunctionTok{qbinom}\NormalTok{(}\FloatTok{0.5}\NormalTok{,}\AttributeTok{size=}\NormalTok{n,}\AttributeTok{prob=}\NormalTok{p),}\FloatTok{0.5}\NormalTok{,}\AttributeTok{col=}\StringTok{"green"}\NormalTok{,}\AttributeTok{lwd=}\DecValTok{2}\NormalTok{)}
+
+
+\FunctionTok{qbinom}\NormalTok{(}\FloatTok{0.5}\NormalTok{,}\AttributeTok{size=}\NormalTok{n,}\AttributeTok{prob=}\NormalTok{p)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{points}\NormalTok{(}\DecValTok{0}\NormalTok{,}\FloatTok{0.7}\NormalTok{,}\AttributeTok{pch=}\DecValTok{19}\NormalTok{,}\AttributeTok{col=}\StringTok{"magenta"}\NormalTok{,}\AttributeTok{cex=}\FloatTok{1.5}\NormalTok{)}
+\FunctionTok{segments}\NormalTok{(}\DecValTok{0}\NormalTok{,}\FloatTok{0.7}\NormalTok{,}\FunctionTok{qbinom}\NormalTok{(}\FloatTok{0.7}\NormalTok{,}\AttributeTok{size=}\NormalTok{n,}\AttributeTok{prob=}\NormalTok{p),}\FloatTok{0.7}\NormalTok{,}\AttributeTok{col=}\StringTok{"green"}\NormalTok{,}\AttributeTok{lwd=}\DecValTok{2}\NormalTok{)}
+\FunctionTok{qbinom}\NormalTok{(}\FloatTok{0.7}\NormalTok{,}\AttributeTok{size=}\NormalTok{n,}\AttributeTok{prob=}\NormalTok{p)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{text}\NormalTok{(}\DecValTok{0}\NormalTok{,}\FloatTok{0.65}\NormalTok{,}\FunctionTok{expression}\NormalTok{(q),}\AttributeTok{cex=}\FloatTok{1.2}\NormalTok{)}
+\FunctionTok{segments}\NormalTok{(}\AttributeTok{x0=}\DecValTok{5}\NormalTok{,}\AttributeTok{y0=}\FunctionTok{pbinom}\NormalTok{(}\DecValTok{5}\NormalTok{,}\AttributeTok{size =}\NormalTok{ n,}\AttributeTok{prob=}\NormalTok{p),}\AttributeTok{x1=}\DecValTok{5}\NormalTok{,}\AttributeTok{y1=}\DecValTok{0}\NormalTok{,}\AttributeTok{col=}\StringTok{"green"}\NormalTok{,}\AttributeTok{lwd =} \DecValTok{2}\NormalTok{)}
+\FunctionTok{points}\NormalTok{(}\DecValTok{5}\NormalTok{,}\DecValTok{0}\NormalTok{,}\AttributeTok{pch=}\DecValTok{19}\NormalTok{,}\AttributeTok{col=}\StringTok{"magenta"}\NormalTok{,}\AttributeTok{cex=}\FloatTok{1.5}\NormalTok{)}
+\FunctionTok{text}\NormalTok{(}\FloatTok{6.2}\NormalTok{,}\FloatTok{0.02}\NormalTok{,}\FunctionTok{expression}\NormalTok{(F[x]}\SpecialCharTok{\^{}}\NormalTok{\{}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{\}}\SpecialCharTok{*}\NormalTok{(q)),}\AttributeTok{cex=}\FloatTok{1.2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{session3a_files/figure-latex/unnamed-chunk-1-7.pdf}
+
+\end{document}
